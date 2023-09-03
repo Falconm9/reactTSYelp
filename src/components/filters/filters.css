@@ -65,3 +65,16 @@
 button:last-child {
 	margin-right: 0;
 }
+
+@media (max-width: 900px) {
+	.button-Filter {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 500px) {
+	.button-Filter {
+		width: 50%;
+		font-size: 10px;	
+	}
+}
