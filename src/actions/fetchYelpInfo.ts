@@ -18,18 +18,18 @@ export async function getRestaurantsInfo(): Promise<RestaurantsInfo> {
     const restaurants: Restaurants[] = data.businesses;
 
     const categoriesArray = restaurants
-      .flatMap(restaurant => restaurant.categories) // Combina todos los arrays de categorías en uno
+      .flatMap(restaurant => restaurant.categories)
       .reduce((categories: Categories[], categorie: Categories) => {
-        // Comprueba si la categoría ya existe en el array de categorías únicas
         const categoriaExistente = categories.find(c => c.alias === categorie.alias);
         
         if (!categoriaExistente) {
-          categories.push(categorie); // Si no existe, agrégala al array de categorías únicas
+          categories.push(categorie);
         }
         
         return categories;
       }, []);
 
+      categoriesArray.splice(0,0, {alias: 'all', title: 'All Restaurants'}); //add categoria All
       return {status, restaurants, categoriesArray};
   } catch (error) {
     if (axios.isAxiosError(error)) {

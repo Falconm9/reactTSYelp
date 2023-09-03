@@ -1,0 +1,28 @@
+.rating {
+  display: inline-block;
+  font-size: 28px;
+  color: transparent; 
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #e3a900;
+  width: 60%;
+  text-align: center;
+}
+
+.rating .full {
+  color: #f4b43e;
+}
+.rating .half {
+  position: relative;
+  color: white;
+  font-size: 28px;
+}
+
+.rating .half::before {
+  content: '\2605'; 
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: #f4b43e;
+  font-size: inherit;
+}

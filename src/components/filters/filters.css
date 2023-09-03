@@ -7,15 +7,6 @@
   scrollbar-color: #c1c1c1 #f0f0f0; 
 }
 
-.container-Filter:hover {
-  opacity: 1;
-}
-
-.button-Filters {
-	display: inline-block;
-	width: 100%;
-}
-
 .container-Filter::-webkit-scrollbar {
   height: 3px; 
 }
@@ -35,7 +26,12 @@
 	background-color: transparent;
 }
 
-button {
+.button-Filters {
+	display: inline-block;
+	width: 100%;
+}
+
+.button-Filter {
 	width: 33%;
 	display: inline-block;
 	padding: 15px 5px;
@@ -51,10 +47,19 @@ button {
 	box-shadow: 4px 4px 10px #c1c1c1;
 }
 
-button:hover {
+.button-Filter:hover {
 	background-color: #f7f7f7;
 	border: solid 1px #c3c3c3;
 	box-shadow: 4px 4px 10px #c3c3c3;
+}
+
+.button-Filter:active {
+	transform: translateY(-2px);
+	transition: transform 34ms;
+}
+
+.button-Filter.filter-Selected {
+	border: 1.5px solid #f0980c;
 }
 
 button:last-child {

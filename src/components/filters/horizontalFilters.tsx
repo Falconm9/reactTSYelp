@@ -1,19 +1,26 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './filters.css';
 import { Categories } from '@/utils/types';
 
-interface HeaderProps {
-  categoriesList: Categories[]
+interface HorizontalFiltersProps {
+  categoriesList: Categories[];
+  handleSelectFilter: (filter: string) => void;
+  filterSelected: string;
 }
 
-const HorizontalFilters:React.FC<HeaderProps> = ({ categoriesList }) => {
-  const [scrollLeft, setScrollLeft] = useState(0);
+const HorizontalFilters:React.FC<HorizontalFiltersProps> = ({ categoriesList, handleSelectFilter, filterSelected }) => {
 
   return (
     <div className="container-Filter">
-      <div className="button-Filters" style={{ transform: `translateX(-${scrollLeft}px)` }}>
+      <div className="button-Filters" style={{ transform: `translateX(0px)` }}>
         {categoriesList.map((categories, index) => (
-          <button key={index}>{categories.title}</button>
+          <button 
+            className={`button-Filter ${filterSelected === categories.alias ? 'filter-Selected': ''}`}  
+            key={index}
+            onClick={() => handleSelectFilter(categories.alias)}
+          >
+            {categories.title}
+          </button>
         ))}
       </div>
     </div>

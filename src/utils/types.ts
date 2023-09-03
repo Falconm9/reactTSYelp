@@ -1,16 +1,16 @@
 export type Restaurants = {
 	id: number;
-	image_url: String;
-	name: String;
+	image_url: string;
+	name: string;
 	rating: number;
-	price: String;
-	url: String;
+	price: string;
+	url: string;
 	categories: Categories[];
 };
   
 export type Categories = {
-	alias: String;
-	title: String;
+	alias: string;
+	title: string;
 }
   
 export type GetYelpResponse = {
@@ -21,5 +21,5 @@ export type RestaurantsInfo = {
 	status?: number;
 	restaurants?: Restaurants[];
 	categoriesArray?: Categories[];
-	error?: String;
+	error?: string;
 }
