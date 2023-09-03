@@ -11,7 +11,6 @@ export async function getRestaurantsInfo(): Promise<RestaurantsInfo> {
         {
           Accept: 'application/json',
           Authorization: 'Bearer 83e7pu5hQ7kbSEnJ7TE69tSjXPPeu1awR5WbdbsAeaicksSzpNs-dtOG80C7UNnB9MC72f79N1SIgfzGX9xFfjb5ss9wIRE6dupmCWxINh3iUTtoa9fx1txTg3DxZHYx',
-          origin: 'http://ec2-54-86-140-20.compute-1.amazonaws.com/'
         },
       },
     );
