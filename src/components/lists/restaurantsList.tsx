@@ -35,7 +35,8 @@ const RestaurantsLists:React.FC<RestaurantsListProps> = ({ infoList, loadingFilt
       <>
         { infoList.map((item) => (
             <div key={item.id} className="card">
-              <Image 
+              <Image
+                className='image-restaurant'
                 src={item.image_url}
                 width={140}
                 height={140}
@@ -63,7 +64,8 @@ const RestaurantsLists:React.FC<RestaurantsListProps> = ({ infoList, loadingFilt
       <>
       { infoList.map((item) => (
           <div key={item.id} className="card-Simple">
-            <Image 
+            <Image
+              className='image-restaurant'
               src={item.image_url}
               width={100}
               height={100}

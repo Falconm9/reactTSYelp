@@ -152,4 +152,34 @@
     text-align: left;
     width: 100%;
   }
+
+  .cards-list {
+    flex-wrap: nowrap;
+    gap: 0;
+    flex-direction: column;
+  }
+}
+
+@media (max-height: 800px) {
+  .card {
+    padding: 5px;
+    height: 70%;
+  }
+}
+
+@media (max-height: 500px) {
+  .image-restaurant {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card {
+    padding: 5px;
+    height: 85%;
+  }
+
+  .title{
+    margin: 5px 0;
+    font-size: 12px;
+  }
 }
