@@ -1,9 +1,12 @@
 import axios from "axios";
+import { decodeString } from "@/utils/tools";
+
 import { Restaurants, Categories, GetYelpResponse, RestaurantsInfo } from "../utils/types";
 
 export async function getRestaurantsInfo(): Promise<RestaurantsInfo> {
   try {
-    const corsApiUrl = 'http://ec2-54-86-140-20.compute-1.amazonaws.com:8080/';
+    const corsApiUrl = decodeString('aHR0cDovL2VjMi01NC04Ni0xNDAtMjAuY29tcHV0ZS0xLmFtYXpvbmF3cy5jb206ODA4MC8');
+    //const corsApiUrl = 'http://localhost:8080/' //uncomment this to test it locally
     const { data, status } = await axios.get<GetYelpResponse>(
       `${corsApiUrl}https://api.yelp.com/v3/businesses/search?location=San%20Jose,%20CA%2095127&term=restaurants`,
       {
