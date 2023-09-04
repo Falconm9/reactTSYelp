@@ -9,7 +9,6 @@
   height: 70vh;
 	scrollbar-width: thin; 	
   scrollbar-color: #c1c1c1 #f0f0f0; 
-  justify-content: center;
 }
 
 .cards-list::-webkit-scrollbar {
