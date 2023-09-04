@@ -9,6 +9,7 @@
   height: 70vh;
 	scrollbar-width: thin; 	
   scrollbar-color: #c1c1c1 #f0f0f0; 
+  justify-content: center;
 }
 
 .cards-list::-webkit-scrollbar {
@@ -137,7 +138,7 @@
 
 @media (max-width: 900px) {
   .priceInfo {
-    font-size: 12px;
+    font-size: 10px;
   }
 }
 
@@ -160,6 +161,11 @@
   }
 }
 
+.info-SimpleCard{
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-90%);
+}
 @media (max-height: 800px) {
   .card {
     padding: 5px;
