@@ -162,12 +162,16 @@ const RestaurantsLists:React.FC<RestaurantsListProps> = ({ infoList, loadingFilt
     window.open(url, '_blank')?.focus();
   }
 
+  if(loadingFilter || isLoading){
+    return(
+      <LoadingDots />
+    )
+  }
+
   return (
     <div id="list-component" className="cards-list">
-      {loadingFilter && <LoadingDots />}
-      {isLoading && <LoadingDots />}
-      {!loadingFilter && !isLoading && !isScreenSmall && <MultiList infoList={items} handleView={handleView}/>}
-      {!loadingFilter && !isLoading && isScreenSmall && <SimpleList infoList={items} handleView={handleView}/>}
+      {!isScreenSmall && <MultiList infoList={items} handleView={handleView}/>}
+      { isScreenSmall && <SimpleList infoList={items} handleView={handleView}/>}
     </div>
   )
 }
